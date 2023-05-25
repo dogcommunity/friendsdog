@@ -1,6 +1,7 @@
 package company.friendsdog.dogcommunity.entity;
 
 import lombok.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDateTime;
 
@@ -12,11 +13,16 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class Pet {
-    private int petNo;
+    private Long userNo;
+    private Long petNo;
     private String petName;
-    private int petAge;
+    private long petAge;
     private String petKind;
-    private String petGender;
+    private Gender petGender;
     private String petPhoto;
     private LocalDateTime profileDateTime;
+    private String hashtag;
+
+    private String addr;
+    private String addDetail;
 }
